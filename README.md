@@ -1,6 +1,6 @@
-# Assembler — Custom Assembly Language Processor
+# Assembler - Custom Assembly Language Processor
 
-A two-pass assembler written in C for a custom assembly language (based on the Imaginary Computer architecture from the Open University of Israel). It reads `.as` source files, expands macros, validates syntax, and outputs object (`.ob`), entry (`.ent`), and extern (`.ext`) files.
+A two-pass assembler written in C for a custom assembly language (based on the Imaginary Computer architecture from the Open University). It reads `.as` source files, expands macros, validates syntax, and outputs object (`.ob`), entry (`.ent`), and extern (`.ext`) files.
 
 ---
 
