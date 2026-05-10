@@ -78,4 +78,6 @@ enum word_type {
 
 };
 
+typedef enum word_type Dir_opt;
+
 #endif

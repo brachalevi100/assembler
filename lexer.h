@@ -60,7 +60,7 @@ union Dir_operand {
  */
 struct Dir {
 	int count_par;      /**< Number of parameters */
-	enum Dir_opt dir_type; /**< Type of directive */
+	Dir_opt dir_type; /**< Type of directive */
 	union Dir_operand dir_operand; /**< Operand details */
 };
 
@@ -84,6 +84,13 @@ typedef struct {
 	int row_type;       /**< Type of row */
 	union Details details; /**< Details of the row */
 } AST;
+
+/**
+ * Creates an error AST node.
+ * @param ast The AST node to mark as an error.
+ * @return A pointer to the error AST node.
+ */
+AST* error_ast(AST* ast);
 
 /**
  * Analyzes a line of code and constructs an AST node.

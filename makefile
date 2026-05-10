@@ -1,32 +1,22 @@
-# Makefile
+# Makefile - Windows (MinGW)
 
-# Compiler and flags
-CC = gcc
+CC     = gcc
 CFLAGS = -Wall -g
 
-# Executable name
-TARGET = my_program
+TARGET = assembler.exe
 
-# Source files
-SRCS = main.c assembler.c preprocessor.c lexer.c function.c tree.c vector.c
-
-# Object files (replace .c with .o)
+SRCS = main.c assembler.c preprosesor.c lexer.c function.c tree.c vector.c
 OBJS = $(SRCS:.c=.o)
 
-# Default target
 all: $(TARGET)
 
-# Link object files to create the executable
 $(TARGET): $(OBJS)
 	$(CC) $(OBJS) -o $(TARGET)
 
-# Rule to compile .c files to .o files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Clean up build artifacts
 clean:
-	rm -f $(TARGET) $(OBJS)
+	del /f /q $(TARGET) $(OBJS) 2>nul || true
 
-# Phony targets
 .PHONY: all clean
